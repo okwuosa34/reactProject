@@ -1,12 +1,11 @@
 import './App.css';
+import Header from './Header';
 
 function App() {
   return (
     <div className="App">
-      <h1>Couples Project name?</h1> 
+      <Header />
 
-
-      {/*  Header  */}
       {/*  Cards  */}
       {/*  Buttons below cards  */}
 
