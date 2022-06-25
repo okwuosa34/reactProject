@@ -2,6 +2,7 @@ import './App.css';
 import Header from './Header';
 // Running on Router v5.2 in order to use switch component 
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import CouplesCards from './components/CouplesCards';
 
 function App() {
   return (
@@ -13,7 +14,7 @@ function App() {
             <h1>I am the chat page</h1>
           </Route>
           <Route path="/">
-            <h1>I am homepage</h1>
+            <CouplesCards />
           </Route>
         </Switch>
       </Router>
