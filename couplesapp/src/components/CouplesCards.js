@@ -23,11 +23,17 @@ function CouplesCards() {
         // will run ONCE when the component loads, and never again
         // Snapshot takes snapshot of document data and return it.
         // wrapped in setPeople to continue to pull from database
-        database
+       const unsubscribe = database
         .collection("Couples")
         .onSnapshot((snapshot) => 
             setPeople(snapshot.docs.map((doc) => doc.data()))
         );
+
+        return () => {
+            // this is the cleanup...
+            unsubscribe();
+        };
+
     }, []);
 
     // Push to an array
@@ -36,8 +42,6 @@ function CouplesCards() {
 
     return (
     <div>
-        <h1>Couples Cards</h1>
-
         <div className="coupleCards__cardContainer">
             {people.map(person => (
                 <CoupleCard
