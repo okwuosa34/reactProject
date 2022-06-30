@@ -10,7 +10,7 @@ import { brown } from '@mui/material/colors';
 import IconButton from '@mui/material/IconButton';
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import { Link, useHistory } from 'react-router-dom';
-import Logo from "./AltLogo.png";
+import Logo from "./newLogo.png";
 
 function Header({ backButton }) {
   // Provides session history 
