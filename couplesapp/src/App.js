@@ -6,12 +6,16 @@ import CouplesCards from './components/CouplesCards';
 import SwipeButtons from './components/SwipeButtons';
 import Chats from './components/Chats';
 import ChatScreen from './components/ChatScreen';
+import Payments from './components/Payments';
 
 function App() {
   return (
     <div className="App">
       <Router>
         <Switch>
+          <Route path="/pay">
+            <Payments />
+          </Route>
           <Route path="/chat/:person">
             <Header backButton="/chat" />
             <ChatScreen />
