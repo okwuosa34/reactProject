@@ -1,5 +1,6 @@
 # Couples Connect
 <img src="couplesapp/src/AltLogo.png" width="100">
+
 ## App Overview
 
 A networking app for couples to connect with other couples who have similar interests. 
@@ -17,3 +18,11 @@ The website database is stored in Firebase which will also host it.
 
 ## Project Screenshot(s)
 
+- HomePage:
+<img src="couplesapp/screenshots/Homepage.jpeg" width="700">
+
+- InboxPage:
+<img src="couplesapp/screenshots/Inbox.jpeg" width="700">
+
+- ChatscreenPage:
+<img src="couplesapp/screenshots/Chatscreen.jpeg" width="700">
