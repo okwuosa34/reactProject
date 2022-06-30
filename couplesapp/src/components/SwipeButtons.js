@@ -9,10 +9,13 @@ import StarRateIcon from "@mui/icons-material/StarRate";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import FlashOnIcon from "@mui/icons-material/FlashOn";
 import IconButton from "@mui/material/IconButton";
+import CurrencyExchangeIcon from '@mui/icons-material/CurrencyExchange';
 import { brown } from '@mui/material/colors';
 import { yellow } from '@mui/material/colors';
 import { lime } from '@mui/material/colors';
 import { blueGrey } from '@mui/material/colors';
+import { green } from '@mui/material/colors';
+import { Link } from 'react-router-dom';
 
 
 function SwipeButtons() {
@@ -32,7 +35,12 @@ function SwipeButtons() {
         </IconButton>
         <IconButton className="swipeButtons__lightning">
             <FlashOnIcon sx={{ color: yellow[400] }} fontSize="large" />
-        </IconButton>       
+        </IconButton>
+        <Link to="/pay">
+        <IconButton className="swipeButtons__currency">
+            <CurrencyExchangeIcon sx={{ color: green[500] }} fontSize="large" />
+        </IconButton>
+        </Link>       
     </div>
   );
 };
