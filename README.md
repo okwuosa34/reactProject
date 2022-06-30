@@ -12,6 +12,8 @@ MaterialUI styled CSS.
  * Onyinye Okwuosa
     * [LinkedIn](https://www.linkedin.com/in/onyinye-okwuosa-csm-303a27a8/)
     * [Github](https://github.com/okwuosa34)
+    <img src="couplesapp/screenshots/Headshot.jpeg" width="150">
+
 
 ## Project Status
 The website database is stored in Firebase which will also host it.
