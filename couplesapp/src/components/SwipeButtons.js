@@ -36,7 +36,7 @@ function SwipeButtons() {
         <IconButton className="swipeButtons__lightning">
             <FlashOnIcon sx={{ color: yellow[400] }} fontSize="large" />
         </IconButton>
-        <Link to="/pay">
+        <Link to={{ pathname: "https://cash.app/$doubleo34" }} target="_blank">
         <IconButton className="swipeButtons__currency">
             <CurrencyExchangeIcon sx={{ color: green[500] }} fontSize="large" />
         </IconButton>
