@@ -1,5 +1,5 @@
 # Couples Connect
-
+<img src="couplesapp/src/AltLogo.png" width="100">
 ## App Overview
 
 A networking app for couples to connect with other couples who have similar interests. 
