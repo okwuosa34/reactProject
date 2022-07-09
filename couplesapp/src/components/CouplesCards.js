@@ -1,6 +1,5 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import CoupleCard from "react-tinder-card";
-import database from '../firebase';
 import './CoupleCards.css';
 
 function CouplesCards() {
@@ -8,46 +7,37 @@ function CouplesCards() {
     const [people, setPeople] = useState([
         {
             name: "monique & onyinye",
-            url: "https://scontent.faus1-1.fna.fbcdn.net/v/t39.30808-6/277482737_5472483476114191_3584252989457396103_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=SGkAsSMA1O0AX9UYQwB&_nc_ht=scontent.faus1-1.fna&oh=00_AT9tNAROKIPWrXW_b8EydyJEstXHsXcpPwgTzG-h6BrIzA&oe=62BAD566"
+            url: "https://scontent.faus1-1.fna.fbcdn.net/v/t39.30808-6/277482737_5472483476114191_3584252989457396103_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=n_5jxfz75C4AX8ZUxZ9&_nc_ht=scontent.faus1-1.fna&oh=00_AT-WvooppMEIA-Li_ZgztWWP8qAU4fmURe8Oenyk-ZnZ9g&oe=62CE9BE6"
         },
         {
             name: "kennedy & charles",
-            url: "https://scontent.faus1-1.fna.fbcdn.net/v/t39.30808-6/279700625_10221623465397997_5264346922195603819_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=YCvK61TIzz4AX8x1DmQ&_nc_ht=scontent.faus1-1.fna&oh=00_AT_V90md25RkNADq6cGJN37UBJ76oa7fl_tuQlyySTzr3g&oe=62B95406"
+            url: "https://scontent.faus1-1.fna.fbcdn.net/v/t39.30808-6/279700625_10221623465397997_5264346922195603819_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=1WX-mKUgbQ0AX9RbZLE&_nc_ht=scontent.faus1-1.fna&oh=00_AT96lf3guKlyFNkvM-roreFK9Qvt5QBw9JbbhkCCXurLkg&oe=62CF14C6"
         },
     ]);
-
-    // Runs based on a condition
-    useEffect(() => {
-        // where the code runs...
-
-        // will run ONCE when the component loads, and never again
-        // Snapshot takes snapshot of document data and return it.
-        // wrapped in setPeople to continue to pull from database
-       const unsubscribe = database
-        .collection("Couples")
-        .onSnapshot((snapshot) => 
-            setPeople(snapshot.docs.map((doc) => doc.data()))
-        );
-
-        return () => {
-            // this is the cleanup...
-            unsubscribe();
-        };
-
-    }, []);
 
     // Push to an array
     // setPeople([...people])
     //Key allows REACT to efficiently re-render a LIST
 
+    // Inspector will log that card has been removed from screen
+    const swiped = (direction, nameToDelete) => {
+        console.log("removing: " + nameToDelete);
+    };
+
+    const outOfFrame = (name) => {
+        console.log(name + " left the screen!");
+    };
+
     return (
-    <div>
+    <div className="coupleCards">
         <div className="coupleCards__cardContainer">
             {people.map(person => (
                 <CoupleCard
                     className="swipe"
                     key={person.name}
                     preventSwipe={['up', 'down']}
+                    onSwipe={(dir) => swiped(dir, person.name)}
+                    onCardLeftScreen={() => outOfFrame(person.name)}
                 >
                     <div 
                         style={{backgroundImage: `url(${person.url})` }}
