@@ -43,11 +43,11 @@ app.post('/couple/cards', (req, res) => {
 
 // Get will be to get the info from the db
 app.get('/couple/cards', (req, res) => {
-    cards.create((err, data) => {
+    cards.find((err, data) => {
         if (err) {
-            res.status(500).send(err)
+            res.status(500).send(err);
         } else{
-            res.status(200).send(data)
+            res.status(200).send(data);
         }
     });
 });
