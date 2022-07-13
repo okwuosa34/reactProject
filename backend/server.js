@@ -29,7 +29,7 @@ app.get('/', (req, res) => res.status(200).send('Hello world!!'));
 
 // Post endpoint adds / uploads data to db
 // Response status of 201 = user data added
-app.post('/couple/cards', (req, res) => {
+app.post('/user/couples', (req, res) => {
     const dbCard = req.body;
 
     cards.create(dbCard, (err, data) => {
@@ -42,7 +42,7 @@ app.post('/couple/cards', (req, res) => {
 });
 
 // Get will be to get the info from the db
-app.get('/couple/cards', (req, res) => {
+app.get('/user/couples', (req, res) => {
     cards.find((err, data) => {
         if (err) {
             res.status(500).send(err);
