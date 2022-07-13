@@ -11,13 +11,13 @@ function Chats() {
       name="Monique & Onyinye"
       message="Hey how are you guys doing?"
       timestamp="30 seconds ago"
-      profilePic="https://scontent.faus1-1.fna.fbcdn.net/v/t39.30808-6/277482737_5472483476114191_3584252989457396103_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=SGkAsSMA1O0AX9UYQwB&_nc_ht=scontent.faus1-1.fna&oh=00_AT9tNAROKIPWrXW_b8EydyJEstXHsXcpPwgTzG-h6BrIzA&oe=62BAD566"  
+      profilePic="https://scontent.faus1-1.fna.fbcdn.net/v/t39.30808-6/277482737_5472483476114191_3584252989457396103_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=LWJc4ByvC8wAX9F_iW5&_nc_ht=scontent.faus1-1.fna&oh=00_AT-NM6Bje5EO-tec7JMHtzxwmGXxcOoMoIu8gIeUUPJLkg&oe=62D29066"  
     />
     <Chatview
       name="Kennedy & Charles"
       message="What's up?!"
       timestamp="45 minutes ago"
-      profilePic="https://scontent.faus1-1.fna.fbcdn.net/v/t39.30808-6/279700625_10221623465397997_5264346922195603819_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=YCvK61TIzz4AX8x1DmQ&_nc_ht=scontent.faus1-1.fna&oh=00_AT_V90md25RkNADq6cGJN37UBJ76oa7fl_tuQlyySTzr3g&oe=62B95406"  
+      profilePic="https://scontent.faus1-1.fna.fbcdn.net/v/t39.30808-6/279700625_10221623465397997_5264346922195603819_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=C9jWoQkexLoAX-hpGT2&_nc_ht=scontent.faus1-1.fna&oh=00_AT-LJkKIaLI3mPqaxAgu1huv3sj3ziJTq_luXU5Za7e2bg&oe=62D30946"  
     />
     <Chatview
       name="Will & Jada"
