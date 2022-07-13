@@ -3,9 +3,9 @@ import Header from './Header';
 // Running on Router v5.2 in order to use switch component 
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import CouplesCards from './components/CouplesCards';
-import SwipeButtons from './components/SwipeButtons';
-import Chats from './components/Chats';
-import ChatScreen from './components/ChatScreen';
+import FeatureButtons from './components/FeatureButtons';
+import Messages from './components/Messages';
+import DirectMessages from './components/DirectMessages';
 import Payments from './components/Payments';
 
 function App() {
@@ -18,16 +18,16 @@ function App() {
           </Route>
           <Route path="/chat/:person">
             <Header backButton="/chat" />
-            <ChatScreen />
+            <DirectMessages />
           </Route>
           <Route path="/chat">
             <Header backButton="/" />
-            <Chats />
+            <Messages />
           </Route>
           <Route path="/">
             <Header />
             <CouplesCards />
-            <SwipeButtons />
+            <FeatureButtons />
           </Route>
         </Switch>
       </Router>

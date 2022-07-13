@@ -29,10 +29,10 @@ function CouplesCards() {
 
     return (
     <div className="coupleCards">
-        <div className="coupleCards__cardContainer">
+        <div className="cardContainer">
             {pair.map(couple => (
                 <CoupleCard
-                    className="swipe"
+                    className="swipeFeature"
                     key={couple.name}
                     preventSwipe={['up', 'down']}
                     onSwipe={(dir) => swiped(dir, couple.name)}
@@ -40,7 +40,7 @@ function CouplesCards() {
                 >
                     <div 
                         style={{ backgroundImage: `url(${couple.imgUrl})` }}
-                        className="card"
+                        className="cardProfile"
                     >
                         <h3>{couple.name}</h3>
                     </div>

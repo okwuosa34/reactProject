@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { Avatar } from '@mui/material';
-import "./ChatScreen.css";
+import "./DirectMessages.css";
 
-function ChatScreen() {
+function DirectMessages() {
   const [input, setInput] = useState('');  
   const [messages, setMessages] = useState([
       {
@@ -30,37 +30,37 @@ function ChatScreen() {
   }
 
   return (
-    <div className="chatScreen">
-        <p className="chatScreen__timestamp">YOU MATCHED WITH MONIQUE & ONYINYE ON 11/12/2021</p>
+    <div className="messageScreen">
+        <p className="messageTimestamp">YOU MATCHED WITH MONIQUE & ONYINYE ON 11/12/2021</p>
         {messages.map((message) => 
             message.name ? (
-               <div className="chatScreen__message">
+               <div className="messageDisplay">
                  <Avatar 
-                   className="chatScreen__image"
+                   className="messageImage"
                    alt={message.name}
                    src={message.image}  
                  />
-                 <p className="chatScreen__text">{message.message}</p>
+                 <p className="messageText">{message.message}</p>
                </div>  
             ) : (
-              <div className="chatScreen__message">
-                  <p className="chatScreen__textUser">{message.message}</p>
+              <div className="messageDisplay">
+                  <p className="userText">{message.message}</p>
               </div>
             )            
         )}
 
-        <form className="chatScreen__input">
+        <form className="messageInput">
             <input
                 value={input}
                 onChange={(e) => setInput(e.target.value)}
-                className="chatScreen__inputField" 
+                className="inputField" 
                 placeholder="Type a message..." 
                 type="text" 
             />
-            <button onClick={handleSend} type="submit" className="chatScreen__inputButton">SEND</button>
+            <button onClick={handleSend} type="submit" className="inputButton">SEND</button>
         </form>
     </div>
   );
 }
 
-export default ChatScreen;
+export default DirectMessages;

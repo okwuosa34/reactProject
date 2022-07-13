@@ -26,5 +26,5 @@ The website database is stored in Firebase which will also host it.
 - InboxPage:
 <img src="couplesapp/screenshots/Inbox.jpeg" width="700">
 
-- ChatscreenPage:
+- DirectMessagesPage:
 <img src="couplesapp/screenshots/Chatscreen.jpeg" width="700">
