@@ -1,7 +1,7 @@
 // Creating the buttons to go under the cards
 
 import React from 'react';
-import './SwipeButtons.css';
+import './FeatureButtons.css';
 
 import ReplayIcon from "@mui/icons-material/Replay";
 import CloseIcon from "@mui/icons-material/Close";
@@ -18,7 +18,7 @@ import { green } from '@mui/material/colors';
 import { Link } from 'react-router-dom';
 
 
-function SwipeButtons() {
+function FeatureButtons() {
   return (
     <div className="swipeButtons">
         <IconButton className="swipeButtons__repeat">
@@ -45,5 +45,5 @@ function SwipeButtons() {
   );
 };
 
-export default SwipeButtons;
+export default FeatureButtons;
 
