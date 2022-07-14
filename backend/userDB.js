@@ -9,4 +9,4 @@ const cardSchema = mongoose.Schema({
 })
 
 // With noSQL dbs collections are used instead of tables
-export default mongoose.model('cards', cardSchema);
+export default mongoose.model('users', cardSchema);

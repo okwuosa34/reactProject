@@ -3,7 +3,7 @@ import mongoose from 'mongoose';
 
 // Cors is security pre-requisite
 import Cors from 'cors';
-import cards from './dbCards.js';
+import users from './userDB.js';
 
 // App Config
 const app = express();
@@ -30,9 +30,9 @@ app.get('/', (req, res) => res.status(200).send('Hello world!!'));
 // Post endpoint adds / uploads data to db
 // Response status of 201 = user data added
 app.post('/user/couples', (req, res) => {
-    const dbCard = req.body;
+    const userDB = req.body;
 
-    cards.create(dbCard, (err, data) => {
+    cards.create(userDB, (err, data) => {
         if (err) {
             res.status(500).send(err)
         } else{
