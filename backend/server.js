@@ -10,7 +10,7 @@ const app = express();
 const port = process.env.PORT || 9000;
 // Connecting MongoDB
 const connection_url = 
-"mongodb+srv://admin:3LIQnhHrJ5F6shTF@cluster0.4bxpwbe.mongodb.net/couplesdb?retryWrites=true&w=majority";
+"mongodb+srv://admin:3LIQnhHrJ5F6shTF@cluster0.4bxpwbe.mongodb.net/userDB?retryWrites=true&w=majority";
 
 // Middlewares
 app.use(express.json());
@@ -32,7 +32,7 @@ app.get('/', (req, res) => res.status(200).send('Hello world!!'));
 app.post('/user/couples', (req, res) => {
     const userDB = req.body;
 
-    cards.create(userDB, (err, data) => {
+    users.create(userDB, (err, data) => {
         if (err) {
             res.status(500).send(err)
         } else{
@@ -43,7 +43,7 @@ app.post('/user/couples', (req, res) => {
 
 // Get will be to get the info from the db
 app.get('/user/couples', (req, res) => {
-    cards.find((err, data) => {
+    users.find((err, data) => {
         if (err) {
             res.status(500).send(err);
         } else{
