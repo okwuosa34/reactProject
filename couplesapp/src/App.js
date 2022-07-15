@@ -6,16 +6,12 @@ import CouplesCards from './components/CouplesCards';
 import FeatureButtons from './components/FeatureButtons';
 import Messages from './components/Messages';
 import DirectMessages from './components/DirectMessages';
-import Payments from './components/Payments';
 
 function App() {
   return (
     <div className="App">
       <Router>
         <Switch>
-          <Route path="/pay">
-            <Payments />
-          </Route>
           <Route path="/chat/:person">
             <Header backButton="/chat" />
             <DirectMessages />
