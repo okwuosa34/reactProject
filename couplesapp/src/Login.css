@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@700&family=Fredoka+One&family=Righteous&display=swap');
+
+h1 {
+    font-family: 'DM Serif Display', serif;
+}
+
+.loginButton {
+    color: #fff;
+    font-size: 15px;
+    text-transform: uppercase;
+    font-family: 'Cormorant SC', serif;
+    font-family: 'Fredoka One', cursive;
+    font-family: 'Righteous', cursive;
+    background: linear-gradient(45deg, #d2c293, #f6edcb);
+    padding: 15px 40px;
+    border-radius: 70px;
+    border: none;
+}
+
+.loginButton:hover {
+    background: linear-gradient(200deg, #d2c293, #f6edcb);
+}
+.loginBody {
+    text-align: center;
+}
+
+.cover {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    background: linear-gradient(
+        to bottom,
+        rgba(150, 138, 116, 0.65) 0%,
+        rgba(235, 235, 235, 0) 100%
+    )
+}
