@@ -29,7 +29,7 @@ function Header({ backButton }) {
         </IconButton>
       )}
 
-      <Link to="/">
+      <Link to="/main">
         <img 
         className="header__logo"
         src={Logo} 

@@ -6,7 +6,8 @@
 
 .messageText {
     margin-left: 10px;
-    background-color: lightgray;
+    background: linear-gradient(45deg, #dcdbd8, #bcbbb8);
+    /*background-color: lightgray;*/
     padding: 15px;
     border-radius: 20px;
 }
@@ -19,7 +20,8 @@
 
 .userText {
     margin-left: auto;
-    background-color: rgba(188, 179, 139, 0.982);
+    background: linear-gradient(45deg, #d2c293, #f6dd85);
+    /*background-color: rgba(188, 179, 139, 0.982);*/
     padding: 15px;
     border-radius: 20px;
     color: white;
@@ -41,9 +43,16 @@
 }
 
 .inputButton {
-    border: none;
+    color: #fff;
+    font-size: 15px;
+    text-transform: uppercase;
+    /*border: none;*/
     margin-right: 20px;
-    background-color: white;
+    /*background-color: white;*/
     font-weight: bolder;
-    color: rgba(172, 157, 96, 0.982);
+    /*color: linear-gradient(45deg, #d2c293, #f6edcb);*/
+    background: linear-gradient(45deg, #d2c293, #f6edcb);
+    padding: 3px 8px;
+    border-radius: 70px;
+    border: none;
 }

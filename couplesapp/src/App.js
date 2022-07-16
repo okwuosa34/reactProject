@@ -6,6 +6,7 @@ import CouplesCards from './components/CouplesCards';
 import FeatureButtons from './components/FeatureButtons';
 import Messages from './components/Messages';
 import DirectMessages from './components/DirectMessages';
+import Login from './Login';
 
 function App() {
   return (
@@ -17,13 +18,16 @@ function App() {
             <DirectMessages />
           </Route>
           <Route path="/chat">
-            <Header backButton="/" />
+            <Header backButton="/main" />
             <Messages />
           </Route>
-          <Route path="/">
+          <Route path="/main">
             <Header />
             <CouplesCards />
             <FeatureButtons />
+          </Route>
+          <Route path="/">
+            <Login />
           </Route>
         </Switch>
       </Router>
