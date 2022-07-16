@@ -1,0 +1,11 @@
+.portal {
+    position: flex;
+    top: 175px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 360px;
+    height: 688px;
+    background-color: white;
+    border-radius: 10px;
+    padding: 40px;
+}
