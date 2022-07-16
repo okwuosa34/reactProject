@@ -27,3 +27,8 @@ nav .navButton {
 .navButton:hover {
     background: #fbfbfb;
 }
+
+.navButton:disabled {
+    background-color: rgb(197, 197, 197);
+    color: #b0a37c;
+}

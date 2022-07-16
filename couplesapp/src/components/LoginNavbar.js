@@ -4,7 +4,14 @@ import './LoginNavbar.css';
 
 
 // if authToken does exist log in button will render to screen
-function LoginNavbar({authToken}) {
+// handlClick function allows for showBox to be accessed from create account button as well as login button
+// Line 27 showBox variable will decide disabled feature
+function LoginNavbar({ authToken, setShowBox, showBox }) {
+
+  const handleClick = () => {
+    setShowBox(true)
+  }
+
   return (
     <nav> 
         <div className="navLogo">
@@ -14,7 +21,11 @@ function LoginNavbar({authToken}) {
             alt="couple logo"
             />
         </div>
-        {!authToken && <button className="navButton">Log in</button>}
+        {!authToken && <button 
+        className="navButton" 
+        onClick={handleClick}
+        disabled={showBox}
+        >Log in</button>}
     </nav> 
   )
 }
