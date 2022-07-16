@@ -1,6 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@700&family=Fredoka+One&family=Righteous&display=swap');
+
 .portal {
     position: flex;
-    top: 175px;
+    left: 0;
+    right: 0;
+    top: 70px;
     margin-left: auto;
     margin-right: auto;
     width: 360px;
@@ -8,4 +12,40 @@
     background-color: white;
     border-radius: 10px;
     padding: 40px;
+}
+
+.portal .exitButton {
+    float: right;
+}
+
+.confirmButton {
+    color: rgb(160, 158, 158);
+    background-color: whitesmoke;
+    font-family: 'Cormorant SC', serif;
+    font-family: 'Fredoka One', cursive;
+    font-family: 'Righteous', cursive;
+    text-transform: uppercase;
+    font-size: 15px;
+    padding: 12px 30px;
+    border-radius: 30px;
+    border: solid 2px #d2c293;
+    margin: 6px;
+    font-weight: 800;
+}
+
+.confirmButton:hover {
+    color: rgb(48, 48, 48);
+    border: solid 2px rgb(48, 48, 48);
+}
+
+.portal form {
+    display: flex;
+    flex-direction: column;
+}
+
+.portal input[type=email],
+.portal input[type=password] {
+    padding: 10px;
+    margin: 10px;
+    font-size: 20px;
 }
