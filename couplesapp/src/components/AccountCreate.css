@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@1&display=swap');
+
+h2 {
+    text-align: center;
+    padding: 10px;
+    padding-bottom: 20px;
+    font-family: 'DM Serif Display', serif;
+}
+
+.creation form {
+    display: flex;
+    justify-content: center;
+}
+
+.creation form section {
+    display: flex;
+    width: 45%;
+    flex-direction: column;
+    padding: 20px;
+    text-align: start;
+}
+
+.creation form input {
+    padding: 20px 35px;
+    margin: 15px 0;
+    font-size: 15px;
+    border: solid #d2c293;
+    border-radius: 20px;
+}
+
+.creation form label {
+    margin: 5px 0;
+    /*text-align: center;*/
+}
+
+.creation form section .ages {
+    display: flex;
+    flex-direction: column;
+}
+
+.creation form .orientations {
+    display: flex;
+    flex-direction: row;
+}
+
+/* webkit to remove arrow counter option in select age field*/
+.creation form input::-webkit-outer-spin-button,
+.creation form input::-webkit-innner-spin-button {
+    -webkit-appearance: none;
+    margin: 1;
+}
+
+.creation form .orientations input {
+    margin-right: 8px;
+}
+
+.creation form .orientations label {
+    padding: 12px;
+    border: solid 3px #cbcbcb;
+    border-radius: 50px;
+    transition: all 0.5s;
+    margin-right: 15px;
+}
+
+label {
+    text-align: center;
+}
+
+.creation form input[type=radio] {
+    display: none;
+}
+
+.creation form input[type=number] {
+    width: 10%;
+}
+
+.creation form input[type=radio]:checked + label {
+    border: solid 3px #d2c293;
+}
