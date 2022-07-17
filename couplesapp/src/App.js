@@ -7,6 +7,7 @@ import FeatureButtons from './components/FeatureButtons';
 import Messages from './components/Messages';
 import DirectMessages from './components/DirectMessages';
 import Login from './Login';
+import AccountCreate from './components/AccountCreate';
 
 function App() {
   return (
@@ -25,6 +26,9 @@ function App() {
             <Header />
             <CouplesCards />
             <FeatureButtons />
+          </Route>
+          <Route path="/create">
+            <AccountCreate />
           </Route>
           <Route path="/">
             <Login />
