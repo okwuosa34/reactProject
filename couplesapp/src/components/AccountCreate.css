@@ -25,7 +25,27 @@ h2 {
     margin: 15px 0;
     font-size: 15px;
     border: solid #d2c293;
-    border-radius: 20px;
+    border-radius: 25px;
+}
+
+.creation form input[type=radio] {
+    display: none;
+}
+
+.creation form input[type=radio]:checked + label {
+    border: solid 3px #d2c293;
+}
+
+.creation form input[type=submit]:hover {
+    background-color: #d2c293;
+}
+
+.creation form input[type=submit]:active {
+    background-color: #efdda9;
+}
+
+.creation form input[type=number] {
+    width: 20%;
 }
 
 .creation form label {
@@ -57,23 +77,20 @@ h2 {
 .creation form .orientations label {
     padding: 12px;
     border: solid 3px #cbcbcb;
-    border-radius: 50px;
+    border-radius: 25px;
     transition: all 0.5s;
     margin-right: 15px;
 }
 
 label {
-    text-align: center;
+    text-align: start;
 }
 
-.creation form input[type=radio] {
-    display: none;
+.creation form .pictureFrame img {
+    width: 100%;
+    border-radius: 25px;
 }
 
-.creation form input[type=number] {
-    width: 10%;
-}
-
-.creation form input[type=radio]:checked + label {
-    border: solid 3px #d2c293;
+.creation {
+    border-top: solid 2px #e4d39f;
 }

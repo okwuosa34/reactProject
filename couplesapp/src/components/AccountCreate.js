@@ -5,14 +5,38 @@ import "./AccountCreate.css";
 
 // Building the form fields for users to input information 
 function AccountCreate() {
+
+    // storing form data
+    const[accountInfo, setAccountInfo] = useState({
+        couple_id: '',
+        couples_name: '',
+        age_range1: '',
+        age_range2: '',
+        email: '',
+        orientation_id: 'heterosexual',
+        orientation_interest: 'no_preference',
+        imgUrl: '',
+        about_us: '',
+        matches: [] 
+    })
     
     const handleSubmit = () => {
         console.log('submitted')
     }
 
-    const handleChange = () => {
-        console.log('changed')
+    const handleChange = (e) => {
+        console.log('e', e)
+        const value = e.target.type === "checkbox" ? e.target.checked : e.target.value
+        const name = e.target.name
+
+        // passing previous state
+        setAccountInfo((prevState) => ({
+            ...prevState,
+            [name] : value
+        }))
     }
+
+   console.log(accountInfo) 
   
     return (
     <>
@@ -24,47 +48,37 @@ function AccountCreate() {
           <h2>CREATE ACCOUNT</h2>
           <form onSubmit={handleSubmit}>
               <section>
-                  <label htmlFor="couples_name">Names</label>
+                  <label htmlFor="couples_name">Names (Ex. John & Jane)</label>
                   <input 
                         id="couples_name" 
                         type="text" 
                         name="couples_name" 
                         placeholder="Names" 
                         required={true} 
-                        value={""} 
+                        value={accountInfo.couples_name} 
                         onChange={handleChange} 
                  /> 
                  <section className="ages"> 
                   <label>Ages</label>
                   <input 
-                        id="age_range" 
+                        id="age_range1" 
                         type="number" 
-                        name="age_range" 
+                        name="age_range1" 
                         placeholder="Age" 
                         required={true} 
-                        value={""} 
+                        value={accountInfo.age_range1} 
                         onChange={handleChange} 
                  /> 
                  <input 
-                        id="age_range" 
+                        id="age_range2" 
                         type="number" 
-                        name="age_range" 
+                        name="age_range2" 
                         placeholder="Age" 
                         required={true} 
-                        value={""} 
+                        value={accountInfo.age_range2} 
                         onChange={handleChange} 
                  /> 
                  </section>
-                 <label>Email</label>
-                  <input 
-                        id="email" 
-                        type="text" 
-                        name="email" 
-                        placeholder="email" 
-                        required={true} 
-                        value={""} 
-                        onChange={handleChange} 
-                 />
                  <label>Couple Orientation</label>
                  <div className="orientations">
                     <input 
@@ -73,7 +87,7 @@ function AccountCreate() {
                             name="orientation_id" 
                             value={"heterosexual"} 
                             onChange={handleChange}
-                            checked={false} 
+                            checked={accountInfo.orientation_id === 'heterosexual'} 
                     />
                     <label htmlFor="heterosexual_id">Heterosexual</label>
                     <input 
@@ -82,65 +96,62 @@ function AccountCreate() {
                             name="orientation_id"  
                             value={"homosexual"} 
                             onChange={handleChange}
-                            checked={false} 
+                            checked={accountInfo.orientation_id === 'homosexual'} 
                     />
                     <label htmlFor="homosexual_id">Homosexual</label>
                     <input 
-                            id="other_id" 
+                            id="not_defined_id" 
                             type="radio" 
                             name="orientation_id"  
-                            value={"other"} 
+                            value={"not_defined"} 
                             onChange={handleChange}
-                            checked={false} 
+                            checked={accountInfo.orientation_id === 'not_defined'} 
                     />
-                    <label htmlFor="other_id">Other</label>
+                    <label htmlFor="not_defined_id">Not Defined</label>
                  </div>
 
-                 <label>Interested In</label>
+                 <label>Couple Match Preference</label>
                  <div className="orientations">  
                     <input 
-                            id="open_interest" 
+                            id="no_preference_interest" 
                             type="radio" 
-                            name="orientation_interest" 
-                            placeholder="Interest" 
+                            name="orientation_interest"  
                             required={true} 
-                            value={"open"} 
+                            value={"no_preference"} 
                             onChange={handleChange}
-                            checked={false} 
+                            checked={accountInfo.orientation_interest === 'no_preference'} 
                     />
-                    <label htmlFor="open_interest">Open</label> 
+                    <label htmlFor="no_preference_interest">No Preference</label> 
                     <input 
                             id="heterosexual_interest" 
                             type="radio" 
                             name="orientation_interest" 
-                            placeholder="Interest" 
                             required={true} 
                             value={"heterosexual"} 
                             onChange={handleChange}
-                            checked={false} 
+                            checked={accountInfo.orientation_interest === 'heterosexual'} 
                     />
                     <label htmlFor="heterosexual_interest">Heterosexual</label> 
                     <input 
                             id="homosexual_interest" 
                             type="radio" 
                             name="orientation_interest" 
-                            placeholder="Interest" 
                             required={true} 
                             value={"homosexual"} 
                             onChange={handleChange}
-                            checked={false} 
+                            checked={accountInfo.orientation_interest === 'homosexual'} 
                     /> 
                     <label htmlFor="homosexual_interest">Homosexual</label>
                  </div> 
 
-                 <label htmlFor="bio">About Us</label>
+                 <label htmlFor="bio">Short Bio</label>
                   <input
                     id="about_us"
                     type="text"
                     name="about_us"
                     required={true}
-                    placeholder="We like hiking..."
-                    value={""}
+                    placeholder="We enjoy bowling..."
+                    value={accountInfo.about_us}
                     onChange={handleChange}
 
                   />
@@ -156,6 +167,9 @@ function AccountCreate() {
                     onChange={handleChange}
                     required={true}
                   />
+                  <div className="pictureFrame">
+                      <img src={accountInfo.imgUrl} alt="display img" />
+                  </div>                  
               </section>
 
           </form>

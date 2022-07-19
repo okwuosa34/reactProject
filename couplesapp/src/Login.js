@@ -24,7 +24,7 @@ function Login() {
   return (
     <div className="cover">
       <div className="loginBody">
-        <LoginNavbar authToken={authToken} 
+        <LoginNavbar  
             setShowBox={setShowBox} 
             showBox={showBox} 
             setSigningUp={setSigningUp} />
