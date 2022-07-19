@@ -62,7 +62,7 @@ function AccountCreate() {
                   <label>Ages</label>
                   <input 
                         id="age_range1" 
-                        type="number" 
+                        type="text" 
                         name="age_range1" 
                         placeholder="Age" 
                         required={true} 
@@ -71,7 +71,7 @@ function AccountCreate() {
                  /> 
                  <input 
                         id="age_range2" 
-                        type="number" 
+                        type="text" 
                         name="age_range2" 
                         placeholder="Age" 
                         required={true} 

@@ -67,13 +67,6 @@ h2 {
     flex-direction: row;
 }
 
-/* webkit to remove arrow counter option in select age field*/
-.creation form input::-webkit-outer-spin-button,
-.creation form input::-webkit-innner-spin-button {
-    -webkit-appearance: none;
-    margin: 1;
-}
-
 .creation form .orientations input {
     margin-right: 8px;
 }
@@ -97,4 +90,8 @@ label {
 
 .creation {
     border-top: solid 2px #e4d39f;
+}
+
+.creation form section .ages {
+    width: 25%;
 }
