@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@300&display=swap');
 
-.cardProfile {
+/*.cardProfile {
     position: relative;
     background-color: #fff;
     width: 600px;
@@ -11,6 +11,18 @@
     background-size: cover;
     background-position: center;
     box-shadow: 0px 18px 53px 0px rgba(0, 0, 0, 0.3);
+}*/
+
+.cardProfile {
+    position: relative;
+    background-color: #d2c293;
+    width: 80vw;
+    max-width: 260px;
+    height: 300px;
+    box-shadow: 0px 0px 60px 0px rgba(0,0,0,0.30);
+    border-radius: 20px;
+    background-size: cover;
+    background-position: center;
 }
 
 .cardProfile h3 {
@@ -22,10 +34,16 @@
     font-weight: bold;
 }
 
-.cardContainer {
+/*.cardContainer {
     display: flex;
     justify-content: center;
     margin-top: 10vh;
+}*/
+
+.cardContainer {
+    width: 90vw;
+    max-width: 260px;
+    height: 300px;
 }
 
 /* stacks card on top of each other */
@@ -38,3 +56,6 @@
     height: 100%;
 }
 
+.couplescards {
+    display: flex;
+}

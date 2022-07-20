@@ -6,6 +6,7 @@ import axios from '../axios';
 function CouplesCards() {
     // array of objects to list off images and name
     const [pair, setPair] = useState([]);
+    const [lastDirection, setLastDirection] = useState()
 
     // Fetching data w/ async and await syntacs
     useEffect(() => {
@@ -19,8 +20,11 @@ function CouplesCards() {
     }, []);    
 
     // Inspector will log that card has been removed from screen
+    // Line 54 if last direction exists <p> will let you know which direction was swiped
+
     const swiped = (direction, nameToDelete) => {
         console.log("removing: " + nameToDelete);
+        setLastDirection(direction)
     };
 
     const outOfFrame = (name) => {
@@ -46,6 +50,9 @@ function CouplesCards() {
                     </div>
                 </CoupleCard>
             ))}
+            <div className="swipeLog">
+                {lastDirection ? <p>You swiped {lastDirection}</p> : <p/>}
+            </div>
         </div>       
     </div>
   );
